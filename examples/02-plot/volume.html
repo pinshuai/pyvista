@@ -274,7 +274,7 @@ NumPy arrays</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UniformGrid (0x7fd788b77528)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UniformGrid (0x7f54074f7828)
   N Cells:      10225800
   N Points:     10368384
   X Bounds:     0.000e+00, 1.497e+02
@@ -330,12 +330,15 @@ Note that here we use a non-default opacity mapping to a sigmoid:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frog</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_frog</span><span class="p">()</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">frog</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid_5&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">frog</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid_6&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">929.</span><span class="p">,</span> <span class="mf">1067.</span><span class="p">,</span> <span class="o">-</span><span class="mf">278.9</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mf">249.5</span><span class="p">,</span> <span class="mf">234.5</span><span class="p">,</span> <span class="mf">101.25</span><span class="p">),</span>
+                     <span class="p">(</span><span class="o">-</span><span class="mf">0.2048</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2632</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9427</span><span class="p">)]</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_volume_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_volume_005.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  24.269 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  22.912 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-volume-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e5d734392cea3eca99c2f75e188b13b9/volume.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">volume.py</span></code></a></p>

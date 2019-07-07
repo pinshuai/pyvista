@@ -38,7 +38,7 @@ NumPy arrays
 
  .. code-block:: none
 
-    UniformGrid (0x7fd788b77528)
+    UniformGrid (0x7f54074f7828)
       N Cells:      10225800
       N Points:     10368384
       X Bounds:     0.000e+00, 1.497e+02
@@ -151,7 +151,10 @@ Here are a few more cool colume rendering examples
     frog = examples.download_frog()
 
     p = pv.Plotter()
-    p.add_volume(frog, cmap="viridis", opacity="sigmoid_5")
+    p.add_volume(frog, cmap="viridis", opacity="sigmoid_6")
+    p.camera_position = [(929., 1067., -278.9),
+                         (249.5, 234.5, 101.25),
+                         (-0.2048, -0.2632, -0.9427)]
     p.show()
 
 
@@ -165,7 +168,7 @@ Here are a few more cool colume rendering examples
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  24.269 seconds)
+   **Total running time of the script:** ( 0 minutes  22.912 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_volume.py:
