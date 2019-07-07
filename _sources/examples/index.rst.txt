@@ -26,8 +26,8 @@ All of these examples are live and available on MyBinder!
 
 .. _sphx_glr_examples_00-load:
 
-Loading and Creating Meshes
----------------------------
+Mesh Generation
+---------------
 
 These examples demo how to read various file types into PyVista mesh objects,
 create meshes from NumPy arrays, and how to create primitive geometric objects
@@ -268,8 +268,8 @@ data.
 Filtering
 ---------
 
-These examples show case various mesh analysis and filtering rountines presentat
-in the :ref:`filters_ref` module. Explore these demos to perfrom tasks such as:
+These examples show case various mesh analysis and filtering routines present
+in the :ref:`filters_ref` module. Explore these demos to perform tasks such as:
 
 * Slicing and cutting meshes
 * Computing mesh properties like volume, area, and surface normals
@@ -401,6 +401,26 @@ in the :ref:`filters_ref` module. Explore these demos to perfrom tasks such as:
    :hidden:
 
    /examples/01-filter/geodesic
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Use vectors in a dataset to plot and orient glyphs/geometric objects.">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_glyphs_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_glyphs.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/glyphs
 
 .. raw:: html
 
@@ -549,12 +569,12 @@ in the :ref:`filters_ref` module. Explore these demos to perfrom tasks such as:
 
 .. _sphx_glr_examples_02-plot:
 
-Plotting Examples
------------------
+Plotting
+--------
 
-These examples show case many of the possibilites for altering how you display
+These examples show case many of the possibilities for altering how you display
 spatial data. Explore these examples to learn how to leverage our powerful 3D
-plotting routines to perfrom tasks like:
+plotting routines to perform tasks like:
 
 * Color mapping scalar values with ``matplotlib`` colormaps
 * Creating animations as GIFs or movie files
@@ -574,9 +594,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-clear_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_clear_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-clear.py`
+        :ref:`sphx_glr_examples_02-plot_clear.py`
 
 .. raw:: html
 
@@ -586,7 +606,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-clear
+   /examples/02-plot/clear
 
 .. raw:: html
 
@@ -594,9 +614,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-cmap_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_cmap_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-cmap.py`
+        :ref:`sphx_glr_examples_02-plot_cmap.py`
 
 .. raw:: html
 
@@ -606,7 +626,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-cmap
+   /examples/02-plot/cmap
 
 .. raw:: html
 
@@ -614,9 +634,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-edges_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_edges_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-edges.py`
+        :ref:`sphx_glr_examples_02-plot_edges.py`
 
 .. raw:: html
 
@@ -626,7 +646,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-edges
+   /examples/02-plot/edges
 
 .. raw:: html
 
@@ -634,9 +654,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-edl_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_edl_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-edl.py`
+        :ref:`sphx_glr_examples_02-plot_edl.py`
 
 .. raw:: html
 
@@ -646,7 +666,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-edl
+   /examples/02-plot/edl
 
 .. raw:: html
 
@@ -654,29 +674,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-gif_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_gif_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-gif.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /examples/02-plot/plot-gif
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Use vectors in a dataset to plot and orient glyphs/geometric objects.">
-
-.. only:: html
-
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-glyphs_thumb.png
-
-        :ref:`sphx_glr_examples_02-plot_plot-glyphs.py`
+        :ref:`sphx_glr_examples_02-plot_gif.py`
 
 .. raw:: html
 
@@ -686,7 +686,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-glyphs
+   /examples/02-plot/gif
 
 .. raw:: html
 
@@ -694,9 +694,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-labels_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_labels_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-labels.py`
+        :ref:`sphx_glr_examples_02-plot_labels.py`
 
 .. raw:: html
 
@@ -706,7 +706,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-labels
+   /examples/02-plot/labels
 
 .. raw:: html
 
@@ -714,9 +714,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-linked_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_linked_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-linked.py`
+        :ref:`sphx_glr_examples_02-plot_linked.py`
 
 .. raw:: html
 
@@ -726,7 +726,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-linked
+   /examples/02-plot/linked
 
 .. raw:: html
 
@@ -734,9 +734,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-movie_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_movie_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-movie.py`
+        :ref:`sphx_glr_examples_02-plot_movie.py`
 
 .. raw:: html
 
@@ -746,7 +746,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-movie
+   /examples/02-plot/movie
 
 .. raw:: html
 
@@ -754,9 +754,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-multi-window_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_multi-window_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-multi-window.py`
+        :ref:`sphx_glr_examples_02-plot_multi-window.py`
 
 .. raw:: html
 
@@ -766,7 +766,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-multi-window
+   /examples/02-plot/multi-window
 
 .. raw:: html
 
@@ -774,9 +774,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-opacity_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_opacity_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-opacity.py`
+        :ref:`sphx_glr_examples_02-plot_opacity.py`
 
 .. raw:: html
 
@@ -786,7 +786,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-opacity
+   /examples/02-plot/opacity
 
 .. raw:: html
 
@@ -794,9 +794,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-orbit_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_orbit_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-orbit.py`
+        :ref:`sphx_glr_examples_02-plot_orbit.py`
 
 .. raw:: html
 
@@ -806,7 +806,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-orbit
+   /examples/02-plot/orbit
 
 .. raw:: html
 
@@ -834,9 +834,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-scalar-bars_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_scalar-bars_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-scalar-bars.py`
+        :ref:`sphx_glr_examples_02-plot_scalar-bars.py`
 
 .. raw:: html
 
@@ -846,7 +846,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-scalar-bars
+   /examples/02-plot/scalar-bars
 
 .. raw:: html
 
@@ -854,9 +854,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-screenshot_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_screenshot_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-screenshot.py`
+        :ref:`sphx_glr_examples_02-plot_screenshot.py`
 
 .. raw:: html
 
@@ -866,7 +866,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-screenshot
+   /examples/02-plot/screenshot
 
 .. raw:: html
 
@@ -874,9 +874,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-shading_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_shading_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-shading.py`
+        :ref:`sphx_glr_examples_02-plot_shading.py`
 
 .. raw:: html
 
@@ -886,7 +886,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-shading
+   /examples/02-plot/shading
 
 .. raw:: html
 
@@ -894,9 +894,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-texture_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_texture_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-texture.py`
+        :ref:`sphx_glr_examples_02-plot_texture.py`
 
 .. raw:: html
 
@@ -906,7 +906,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-texture
+   /examples/02-plot/texture
 
 .. raw:: html
 
@@ -914,9 +914,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-themes_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_themes_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-themes.py`
+        :ref:`sphx_glr_examples_02-plot_themes.py`
 
 .. raw:: html
 
@@ -926,7 +926,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-themes
+   /examples/02-plot/themes
 
 .. raw:: html
 
@@ -934,9 +934,9 @@ plotting routines to perfrom tasks like:
 
 .. only:: html
 
-    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-volume_thumb.png
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_volume_thumb.png
 
-        :ref:`sphx_glr_examples_02-plot_plot-volume.py`
+        :ref:`sphx_glr_examples_02-plot_volume.py`
 
 .. raw:: html
 
@@ -946,7 +946,7 @@ plotting routines to perfrom tasks like:
 .. toctree::
    :hidden:
 
-   /examples/02-plot/plot-volume
+   /examples/02-plot/volume
 .. raw:: html
 
     <div style='clear:both'></div>

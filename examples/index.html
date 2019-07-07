@@ -124,7 +124,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#loading-and-creating-meshes">Loading and Creating Meshes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mesh-generation">Mesh Generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="00-load/create-geometric-objects.html">Geometric Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="00-load/create-parametric-geometric-objects.html">Parametric Geometric Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="00-load/create-poly.html">Create PolyData</a></li>
@@ -145,6 +145,7 @@
 <li class="toctree-l3"><a class="reference internal" href="01-filter/extract-cells-inside-surface.html">Extract Cells Inside Surface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="01-filter/extract-edges.html">Extract Edges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="01-filter/geodesic.html">Geodesic Paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-filter/glyphs.html">Plotting Glyphs (Vectors)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="01-filter/poly-ray-trace.html">Ray Tracing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="01-filter/project-plane.html">Project to a Plane</a></li>
 <li class="toctree-l3"><a class="reference internal" href="01-filter/resample.html">Resampling &amp; Interpolating</a></li>
@@ -154,26 +155,25 @@
 <li class="toctree-l3"><a class="reference internal" href="01-filter/volume-smoothing.html">Volume Smoothing</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#plotting-examples">Plotting Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-clear.html">Clearing a Mesh or the Entire Plot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-cmap.html">Custom Colormaps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-edges.html">Show Edges</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-edl.html">Eye Dome Lighting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-gif.html">Create a GIF Movie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-glyphs.html">Plotting Glyphs (Vectors)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-labels.html">Label Points</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-linked.html">Linked Views in Subplots</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-movie.html">Create a MP4 Movie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-multi-window.html">Multi-Window Plot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-opacity.html">Plot with Opacity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-orbit.html">Orbiting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/clear.html">Clearing a Mesh or the Entire Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/cmap.html">Custom Colormaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/edges.html">Show Edges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/edl.html">Eye Dome Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/gif.html">Create a GIF Movie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/labels.html">Label Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/linked.html">Linked Views in Subplots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/movie.html">Create a MP4 Movie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/multi-window.html">Multi-Window Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/opacity.html">Plot with Opacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/orbit.html">Orbiting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02-plot/plot-over-line.html">Plot Over Line</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-scalar-bars.html">Customize Scalar Bars</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-screenshot.html">Saving Screenshots</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-shading.html">Types of Shading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-texture.html">Applying Textures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-themes.html">Change the Theme</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02-plot/plot-volume.html">Volume Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/scalar-bars.html">Customize Scalar Bars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/screenshot.html">Saving Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/shading.html">Types of Shading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/texture.html">Applying Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/themes.html">Change the Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-plot/volume.html">Volume Rendering</a></li>
 </ul>
 </li>
 </ul>
@@ -280,8 +280,8 @@
 <p>Here is a gallery of all the quick examples demonstrating what PyVista can do!</p>
 <p>All of these examples are live and available on MyBinder!</p>
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/pyvista/pyvista-examples/master"><img alt="Launch on Binder" src="https://mybinder.org/badge_logo.svg" /></a>
-<div style='clear:both'></div><div class="section" id="loading-and-creating-meshes">
-<span id="sphx-glr-examples-00-load"></span><h2>Loading and Creating Meshes<a class="headerlink" href="#loading-and-creating-meshes" title="Permalink to this headline">¶</a></h2>
+<div style='clear:both'></div><div class="section" id="mesh-generation">
+<span id="sphx-glr-examples-00-load"></span><h2>Mesh Generation<a class="headerlink" href="#mesh-generation" title="Permalink to this headline">¶</a></h2>
 <p>These examples demo how to read various file types into PyVista mesh objects,
 create meshes from NumPy arrays, and how to create primitive geometric objects
 like spheres, arrows, cubes, ellipsoids and more!
@@ -357,8 +357,8 @@ data.</p>
 <div style='clear:both'></div></div>
 <div class="section" id="filtering">
 <span id="sphx-glr-examples-01-filter"></span><h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h2>
-<p>These examples show case various mesh analysis and filtering rountines presentat
-in the <a class="reference internal" href="../core/filters.html#filters-ref"><span class="std std-ref">Filters</span></a> module. Explore these demos to perfrom tasks such as:</p>
+<p>These examples show case various mesh analysis and filtering routines present
+in the <a class="reference internal" href="../core/filters.html#filters-ref"><span class="std std-ref">Filters</span></a> module. Explore these demos to perform tasks such as:</p>
 <ul class="simple">
 <li><p>Slicing and cutting meshes</p></li>
 <li><p>Computing mesh properties like volume, area, and surface normals</p></li>
@@ -405,54 +405,60 @@ in the <a class="reference internal" href="../core/filters.html#filters-ref"><sp
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Single line segment ray tracing for PolyData objects."><div class="figure align-default" id="id18">
+<div class="sphx-glr-thumbcontainer" tooltip="Use vectors in a dataset to plot and orient glyphs/geometric objects."><div class="figure align-default" id="id18">
+<img alt="../_images/sphx_glr_glyphs_thumb.png" src="../_images/sphx_glr_glyphs_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/glyphs.html#sphx-glr-examples-01-filter-glyphs-py"><span class="std std-ref">Plotting Glyphs (Vectors)</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Single line segment ray tracing for PolyData objects."><div class="figure align-default" id="id19">
 <img alt="../_images/sphx_glr_poly-ray-trace_thumb.png" src="../_images/sphx_glr_poly-ray-trace_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/poly-ray-trace.html#sphx-glr-examples-01-filter-poly-ray-trace-py"><span class="std std-ref">Ray Tracing</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/poly-ray-trace.html#sphx-glr-examples-01-filter-poly-ray-trace-py"><span class="std std-ref">Ray Tracing</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="pyvista.PolyData surfaces and pointsets can easily be projected to a plane defined by a normal ..."><div class="figure align-default" id="id19">
+<div class="sphx-glr-thumbcontainer" tooltip="pyvista.PolyData surfaces and pointsets can easily be projected to a plane defined by a normal ..."><div class="figure align-default" id="id20">
 <img alt="../_images/sphx_glr_project-plane_thumb.png" src="../_images/sphx_glr_project-plane_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/project-plane.html#sphx-glr-examples-01-filter-project-plane-py"><span class="std std-ref">Project to a Plane</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/project-plane.html#sphx-glr-examples-01-filter-project-plane-py"><span class="std std-ref">Project to a Plane</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Resample one mesh&#x27;s point/cell arrays onto another meshes nodes."><div class="figure align-default" id="id20">
+<div class="sphx-glr-thumbcontainer" tooltip="Resample one mesh&#x27;s point/cell arrays onto another meshes nodes."><div class="figure align-default" id="id21">
 <img alt="../_images/sphx_glr_resample_thumb.png" src="../_images/sphx_glr_resample_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/resample.html#sphx-glr-examples-01-filter-resample-py"><span class="std std-ref">Resampling &amp; Interpolating</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/resample.html#sphx-glr-examples-01-filter-resample-py"><span class="std std-ref">Resampling &amp; Interpolating</span></a></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Extract thin planar slices from a volume"><div class="figure align-default" id="id21">
+<div class="sphx-glr-thumbcontainer" tooltip="Extract thin planar slices from a volume"><div class="figure align-default" id="id22">
 <img alt="../_images/sphx_glr_slicing_thumb.png" src="../_images/sphx_glr_slicing_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/slicing.html#sphx-glr-examples-01-filter-slicing-py"><span class="std std-ref">Slicing</span></a></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/slicing.html#sphx-glr-examples-01-filter-slicing-py"><span class="std std-ref">Slicing</span></a></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Integrate a vector field to generate streamlines."><div class="figure align-default" id="id22">
+<div class="sphx-glr-thumbcontainer" tooltip="Integrate a vector field to generate streamlines."><div class="figure align-default" id="id23">
 <img alt="../_images/sphx_glr_streamlines_thumb.png" src="../_images/sphx_glr_streamlines_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/streamlines.html#sphx-glr-examples-01-filter-streamlines-py"><span class="std std-ref">Streamlines</span></a></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/streamlines.html#sphx-glr-examples-01-filter-streamlines-py"><span class="std std-ref">Streamlines</span></a></span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Using common filters like thresholding and clipping"><div class="figure align-default" id="id23">
+<div class="sphx-glr-thumbcontainer" tooltip="Using common filters like thresholding and clipping"><div class="figure align-default" id="id24">
 <img alt="../_images/sphx_glr_using-filters_thumb.png" src="../_images/sphx_glr_using-filters_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/using-filters.html#sphx-glr-examples-01-filter-using-filters-py"><span class="std std-ref">Using Common Filters</span></a></span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/using-filters.html#sphx-glr-examples-01-filter-using-filters-py"><span class="std std-ref">Using Common Filters</span></a></span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Smoothing rough edges of a volumetric surface"><div class="figure align-default" id="id24">
+<div class="sphx-glr-thumbcontainer" tooltip="Smoothing rough edges of a volumetric surface"><div class="figure align-default" id="id25">
 <img alt="../_images/sphx_glr_volume-smoothing_thumb.png" src="../_images/sphx_glr_volume-smoothing_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/volume-smoothing.html#sphx-glr-examples-01-filter-volume-smoothing-py"><span class="std std-ref">Volume Smoothing</span></a></span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-filter/volume-smoothing.html#sphx-glr-examples-01-filter-volume-smoothing-py"><span class="std std-ref">Volume Smoothing</span></a></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div style='clear:both'></div></div>
-<div class="section" id="plotting-examples">
-<span id="sphx-glr-examples-02-plot"></span><h2>Plotting Examples<a class="headerlink" href="#plotting-examples" title="Permalink to this headline">¶</a></h2>
-<p>These examples show case many of the possibilites for altering how you display
+<div class="section" id="plotting">
+<span id="sphx-glr-examples-02-plot"></span><h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<p>These examples show case many of the possibilities for altering how you display
 spatial data. Explore these examples to learn how to leverage our powerful 3D
-plotting routines to perfrom tasks like:</p>
+plotting routines to perform tasks like:</p>
 <ul class="simple">
 <li><p>Color mapping scalar values with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> colormaps</p></li>
 <li><p>Creating animations as GIFs or movie files</p></li>
@@ -464,75 +470,69 @@ plotting routines to perfrom tasks like:</p>
 <li><p>Making a dataset transparent or using a scalar value to map opacity</p></li>
 <li><p>Adding textures/images draped over a mesh (texture mapping)</p></li>
 </ul>
-<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to remove elements from a scene."><div class="figure align-default" id="id25">
-<img alt="../_images/sphx_glr_plot-clear_thumb.png" src="../_images/sphx_glr_plot-clear_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-clear.html#sphx-glr-examples-02-plot-plot-clear-py"><span class="std std-ref">Clearing a Mesh or the Entire Plot</span></a></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to remove elements from a scene."><div class="figure align-default" id="id26">
+<img alt="../_images/sphx_glr_clear_thumb.png" src="../_images/sphx_glr_clear_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/clear.html#sphx-glr-examples-02-plot-clear-py"><span class="std std-ref">Clearing a Mesh or the Entire Plot</span></a></span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Use a custom built colormap when plotting scalar values."><div class="figure align-default" id="id26">
-<img alt="../_images/sphx_glr_plot-cmap_thumb.png" src="../_images/sphx_glr_plot-cmap_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-cmap.html#sphx-glr-examples-02-plot-plot-cmap-py"><span class="std std-ref">Custom Colormaps</span></a></span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<div class="sphx-glr-thumbcontainer" tooltip="Use a custom built colormap when plotting scalar values."><div class="figure align-default" id="id27">
+<img alt="../_images/sphx_glr_cmap_thumb.png" src="../_images/sphx_glr_cmap_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/cmap.html#sphx-glr-examples-02-plot-cmap-py"><span class="std std-ref">Custom Colormaps</span></a></span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Show the edges of all geometries within a mesh"><div class="figure align-default" id="id27">
-<img alt="../_images/sphx_glr_plot-edges_thumb.png" src="../_images/sphx_glr_plot-edges_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-edges.html#sphx-glr-examples-02-plot-plot-edges-py"><span class="std std-ref">Show Edges</span></a></span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<div class="sphx-glr-thumbcontainer" tooltip="Show the edges of all geometries within a mesh"><div class="figure align-default" id="id28">
+<img alt="../_images/sphx_glr_edges_thumb.png" src="../_images/sphx_glr_edges_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/edges.html#sphx-glr-examples-02-plot-edges-py"><span class="std std-ref">Show Edges</span></a></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Eye-Dome Lighting (EDL) is a non-photorealistic, image-based shading technique designed to impr..."><div class="figure align-default" id="id28">
-<img alt="../_images/sphx_glr_plot-edl_thumb.png" src="../_images/sphx_glr_plot-edl_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-edl.html#sphx-glr-examples-02-plot-plot-edl-py"><span class="std std-ref">Eye Dome Lighting</span></a></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+<div class="sphx-glr-thumbcontainer" tooltip="Eye-Dome Lighting (EDL) is a non-photorealistic, image-based shading technique designed to impr..."><div class="figure align-default" id="id29">
+<img alt="../_images/sphx_glr_edl_thumb.png" src="../_images/sphx_glr_edl_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/edl.html#sphx-glr-examples-02-plot-edl-py"><span class="std std-ref">Eye Dome Lighting</span></a></span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Generate a moving gif from an active plotter"><div class="figure align-default" id="id29">
-<img alt="../_images/sphx_glr_plot-gif_thumb.png" src="../_images/sphx_glr_plot-gif_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-gif.html#sphx-glr-examples-02-plot-plot-gif-py"><span class="std std-ref">Create a GIF Movie</span></a></span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="Use vectors in a dataset to plot and orient glyphs/geometric objects."><div class="figure align-default" id="id30">
-<img alt="../_images/sphx_glr_plot-glyphs_thumb.png" src="../_images/sphx_glr_plot-glyphs_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-glyphs.html#sphx-glr-examples-02-plot-plot-glyphs-py"><span class="std std-ref">Plotting Glyphs (Vectors)</span></a></span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+<div class="sphx-glr-thumbcontainer" tooltip="Generate a moving gif from an active plotter"><div class="figure align-default" id="id30">
+<img alt="../_images/sphx_glr_gif_thumb.png" src="../_images/sphx_glr_gif_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/gif.html#sphx-glr-examples-02-plot-gif-py"><span class="std std-ref">Create a GIF Movie</span></a></span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Use string arrays in a point set to label points"><div class="figure align-default" id="id31">
-<img alt="../_images/sphx_glr_plot-labels_thumb.png" src="../_images/sphx_glr_plot-labels_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-labels.html#sphx-glr-examples-02-plot-plot-labels-py"><span class="std std-ref">Label Points</span></a></span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_labels_thumb.png" src="../_images/sphx_glr_labels_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/labels.html#sphx-glr-examples-02-plot-labels-py"><span class="std std-ref">Label Points</span></a></span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Linked Views in Subplots"><div class="figure align-default" id="id32">
-<img alt="../_images/sphx_glr_plot-linked_thumb.png" src="../_images/sphx_glr_plot-linked_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-linked.html#sphx-glr-examples-02-plot-plot-linked-py"><span class="std std-ref">Linked Views in Subplots</span></a></span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_linked_thumb.png" src="../_images/sphx_glr_linked_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/linked.html#sphx-glr-examples-02-plot-linked-py"><span class="std std-ref">Linked Views in Subplots</span></a></span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Create an animated MP4 movie of a rendering scene"><div class="figure align-default" id="id33">
-<img alt="../_images/sphx_glr_plot-movie_thumb.png" src="../_images/sphx_glr_plot-movie_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-movie.html#sphx-glr-examples-02-plot-plot-movie-py"><span class="std std-ref">Create a MP4 Movie</span></a></span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_movie_thumb.png" src="../_images/sphx_glr_movie_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/movie.html#sphx-glr-examples-02-plot-movie-py"><span class="std std-ref">Create a MP4 Movie</span></a></span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip=" Subplotting: having multiple scenes in a signle window"><div class="figure align-default" id="id34">
-<img alt="../_images/sphx_glr_plot-multi-window_thumb.png" src="../_images/sphx_glr_plot-multi-window_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-multi-window.html#sphx-glr-examples-02-plot-plot-multi-window-py"><span class="std std-ref">Multi-Window Plot</span></a></span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_multi-window_thumb.png" src="../_images/sphx_glr_multi-window_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/multi-window.html#sphx-glr-examples-02-plot-multi-window-py"><span class="std std-ref">Multi-Window Plot</span></a></span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Plot a mesh&#x27;s scalar array with an opacity trasfer funciton"><div class="figure align-default" id="id35">
-<img alt="../_images/sphx_glr_plot-opacity_thumb.png" src="../_images/sphx_glr_plot-opacity_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-opacity.html#sphx-glr-examples-02-plot-plot-opacity-py"><span class="std std-ref">Plot with Opacity</span></a></span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_opacity_thumb.png" src="../_images/sphx_glr_opacity_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/opacity.html#sphx-glr-examples-02-plot-opacity-py"><span class="std std-ref">Plot with Opacity</span></a></span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Orbit around a scene."><div class="figure align-default" id="id36">
-<img alt="../_images/sphx_glr_plot-orbit_thumb.png" src="../_images/sphx_glr_plot-orbit_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-orbit.html#sphx-glr-examples-02-plot-plot-orbit-py"><span class="std std-ref">Orbiting</span></a></span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_orbit_thumb.png" src="../_images/sphx_glr_orbit_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/orbit.html#sphx-glr-examples-02-plot-orbit-py"><span class="std std-ref">Orbiting</span></a></span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
@@ -543,38 +543,38 @@ plotting routines to perfrom tasks like:</p>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Walk through of all the different capabilities of scalar bars and how a user can customize scal..."><div class="figure align-default" id="id38">
-<img alt="../_images/sphx_glr_plot-scalar-bars_thumb.png" src="../_images/sphx_glr_plot-scalar-bars_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-scalar-bars.html#sphx-glr-examples-02-plot-plot-scalar-bars-py"><span class="std std-ref">Customize Scalar Bars</span></a></span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_scalar-bars_thumb.png" src="../_images/sphx_glr_scalar-bars_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/scalar-bars.html#sphx-glr-examples-02-plot-scalar-bars-py"><span class="std std-ref">Customize Scalar Bars</span></a></span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Saving Screenshots"><div class="figure align-default" id="id39">
-<img alt="../_images/sphx_glr_plot-screenshot_thumb.png" src="../_images/sphx_glr_plot-screenshot_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-screenshot.html#sphx-glr-examples-02-plot-plot-screenshot-py"><span class="std std-ref">Saving Screenshots</span></a></span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_screenshot_thumb.png" src="../_images/sphx_glr_screenshot_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/screenshot.html#sphx-glr-examples-02-plot-screenshot-py"><span class="std std-ref">Saving Screenshots</span></a></span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Use a custom built colormap when plotting scalar values."><div class="figure align-default" id="id40">
-<img alt="../_images/sphx_glr_plot-shading_thumb.png" src="../_images/sphx_glr_plot-shading_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-shading.html#sphx-glr-examples-02-plot-plot-shading-py"><span class="std std-ref">Types of Shading</span></a></span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_shading_thumb.png" src="../_images/sphx_glr_shading_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/shading.html#sphx-glr-examples-02-plot-shading-py"><span class="std std-ref">Types of Shading</span></a></span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Plot a mesh with an image projected onto it as a texture."><div class="figure align-default" id="id41">
-<img alt="../_images/sphx_glr_plot-texture_thumb.png" src="../_images/sphx_glr_plot-texture_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-texture.html#sphx-glr-examples-02-plot-plot-texture-py"><span class="std std-ref">Applying Textures</span></a></span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_texture_thumb.png" src="../_images/sphx_glr_texture_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/texture.html#sphx-glr-examples-02-plot-texture-py"><span class="std std-ref">Applying Textures</span></a></span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="PyVista has a few coloring themes for you to choose!"><div class="figure align-default" id="id42">
-<img alt="../_images/sphx_glr_plot-themes_thumb.png" src="../_images/sphx_glr_plot-themes_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-themes.html#sphx-glr-examples-02-plot-plot-themes-py"><span class="std std-ref">Change the Theme</span></a></span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_themes_thumb.png" src="../_images/sphx_glr_themes_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/themes.html#sphx-glr-examples-02-plot-themes-py"><span class="std std-ref">Change the Theme</span></a></span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-thumbcontainer" tooltip="Volume render uniform mesh types like pyvista.UniformGrid or 3D NumPy arrays"><div class="figure align-default" id="id43">
-<img alt="../_images/sphx_glr_plot-volume_thumb.png" src="../_images/sphx_glr_plot-volume_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/plot-volume.html#sphx-glr-examples-02-plot-plot-volume-py"><span class="std std-ref">Volume Rendering</span></a></span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphx_glr_volume_thumb.png" src="../_images/sphx_glr_volume_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-plot/volume.html#sphx-glr-examples-02-plot-volume-py"><span class="std std-ref">Volume Rendering</span></a></span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
