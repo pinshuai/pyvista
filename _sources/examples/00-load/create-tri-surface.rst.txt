@@ -54,11 +54,11 @@ First, create some points for the surface.
 
  .. code-block:: none
 
-    [[-202.60124745 -195.96175225    1.88279334]
-     [-174.55041961 -195.96175225    3.19544807]
-     [-161.89151407 -195.96175225    3.95379806]
-     [-140.37648978 -195.96175225    5.47308162]
-     [-111.08769794 -195.96175225    7.90974811]]
+    [[-196.78237691 -195.37082223    2.13938217]
+     [-174.9713577  -195.37082223    3.20891693]
+     [-154.06991351 -195.37082223    4.52584982]
+     [-133.64848564 -195.37082223    6.07138282]
+     [-115.97454164 -195.37082223    7.56988262]]
 
 
 
@@ -103,7 +103,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.288 seconds)
+   **Total running time of the script:** ( 0 minutes  1.294 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:
