@@ -620,7 +620,7 @@ between the meshes.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.clean">
-<code class="sig-name descname">clean</code><span class="sig-paren">(</span><em class="sig-param">point_merging=True</em>, <em class="sig-param">merge_tol=None</em>, <em class="sig-param">lines_to_points=True</em>, <em class="sig-param">polys_to_lines=True</em>, <em class="sig-param">strips_to_polys=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.clean" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><em class="sig-param">point_merging=True</em>, <em class="sig-param">merge_tol=None</em>, <em class="sig-param">lines_to_points=True</em>, <em class="sig-param">polys_to_lines=True</em>, <em class="sig-param">strips_to_polys=True</em>, <em class="sig-param">inplace=False</em>, <em class="sig-param">absolute=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.clean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cleans mesh by merging duplicate points, remove unused
 points, and/or remove degenerate cells.</p>
 <dl class="field-list simple">
@@ -628,13 +628,16 @@ points, and/or remove degenerate cells.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>point_merging</strong> (<em>bool</em><em>, </em><em>optional</em>) – Enables point merging.  On by default.</p></li>
 <li><p><strong>merge_tol</strong> (<em>float</em><em>, </em><em>optional</em>) – Set merging tolarance.  When enabled merging is set to
-absolute distance</p></li>
+absolute distance. If <code class="docutils literal notranslate"><span class="pre">absolute</span></code> is False, then the merging
+tolerance is a fraction of the bounding box legnth. The alias
+<code class="docutils literal notranslate"><span class="pre">tolerance</span></code> is also excepted.</p></li>
 <li><p><strong>lines_to_points</strong> (<em>bool</em><em>, </em><em>optional</em>) – Turn on/off conversion of degenerate lines to points.  Enabled by
 default.</p></li>
 <li><p><strong>polys_to_lines</strong> (<em>bool</em><em>, </em><em>optional</em>) – Turn on/off conversion of degenerate polys to lines.  Enabled by
 default.</p></li>
 <li><p><strong>strips_to_polys</strong> (<em>bool</em><em>, </em><em>optional</em>) – Turn on/off conversion of degenerate strips to polys.</p></li>
 <li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Updates mesh in-place while returning nothing.  Default True.</p></li>
+<li><p><strong>absolute</strong> (<em>bool</em><em>, </em><em>optional</em>) – Control if <code class="docutils literal notranslate"><span class="pre">merge_tol</span></code> is an absolute distance or a fraction.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

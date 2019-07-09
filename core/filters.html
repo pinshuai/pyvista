@@ -307,7 +307,7 @@ PyVista dataset.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_geometry</span></code>()</p></td>
 <td><p>Extract the outer surface of a volume or structured grid dataset as PolyData.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom, subset])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom, …])</p></td>
 <td><p>Copies a geometric representation (called a glyph) to every point in the input dataset.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(points[, sharpness, radius, …])</p></td>
@@ -578,7 +578,7 @@ boundary faces of the dataset.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.glyph">
-<code class="sig-name descname">glyph</code><span class="sig-paren">(</span><em class="sig-param">orient=True</em>, <em class="sig-param">scale=True</em>, <em class="sig-param">factor=1.0</em>, <em class="sig-param">geom=None</em>, <em class="sig-param">subset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.glyph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">glyph</code><span class="sig-paren">(</span><em class="sig-param">orient=True</em>, <em class="sig-param">scale=True</em>, <em class="sig-param">factor=1.0</em>, <em class="sig-param">geom=None</em>, <em class="sig-param">tolerance=0.0</em>, <em class="sig-param">absolute=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.glyph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies a geometric representation (called a glyph) to every
 point in the input dataset.  The glyph may be oriented along
 the input vectors, and it may be scaled according to scalar
@@ -590,8 +590,10 @@ data or vector magnitude.</p>
 <li><p><strong>scale</strong> (<em>bool</em>) – Use the active scalars to scale the glyphs</p></li>
 <li><p><strong>factor</strong> (<em>float</em>) – Scale factor applied to sclaing array</p></li>
 <li><p><strong>geom</strong> (<em>vtk.vtkDataSet</em>) – The geometry to use for the glyph</p></li>
-<li><p><strong>subset</strong> (<em>float</em><em>, </em><em>optional</em>) – Take a percentage subset of the mesh’s points. Float value is
-percent subset between 0 and 1.</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) – Specify tolerance in terms of fraction of bounding box length.
+Float value is between 0 and 1. Default is 0.0. If <code class="docutils literal notranslate"><span class="pre">absolute</span></code>
+is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the tolerance can be an absolute distance.</p></li>
+<li><p><strong>absolute</strong> (<em>bool</em><em>, </em><em>optional</em>) – Control if <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> is an absolute distance or a fraction.</p></li>
 </ul>
 </dd>
 </dl>

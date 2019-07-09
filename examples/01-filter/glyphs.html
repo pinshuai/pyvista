@@ -299,13 +299,13 @@ access the <a class="reference internal" href="../../core/common.html#pyvista.Co
 <span class="n">sphere</span><span class="o">.</span><span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span> <span class="o">*</span> <span class="mf">0.3</span>
 
 <span class="c1"># plot just the arrows</span>
-<span class="n">sphere</span><span class="o">.</span><span class="n">arrows</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">sphere</span><span class="o">.</span><span class="n">arrows</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;GlyphScale&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_glyphs_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_glyphs_002.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the arrows and the sphere</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">arrows</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stitle</span><span class="o">=</span><span class="s2">&quot;Vector Magnitude&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">arrows</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;GlyphScale&#39;</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stitle</span><span class="o">=</span><span class="s2">&quot;Vector Magnitude&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">ambient</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -315,14 +315,13 @@ access the <a class="reference internal" href="../../core/common.html#pyvista.Co
 <h2>Subset of Glyphs<a class="headerlink" href="#subset-of-glyphs" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you might not want glyphs for every node in the input dataset. In
 this case, you can choose to build glyphs for a subset of the input dataset
-by using a percentage of the points. Using this percentage, a uniform
-distribuiton is used to select points from the input dataset and use them for
-glyphing.</p>
+by using a merging tolerance. Here we specify a merging tolerance of five
+percent which equats to five perfect of the bounding box’s length.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example dataset with normals</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 
 <span class="c1"># create a subset of arrows using the glyph filter</span>
-<span class="n">arrows</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="s2">&quot;Normals&quot;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;Normals&quot;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">arrows</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="s2">&quot;Normals&quot;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;Normals&quot;</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">arrows</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
@@ -331,7 +330,7 @@ glyphing.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_glyphs_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_glyphs_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.663 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.793 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-glyphs-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/90a735e5f5b1408c4958d2aa028a82d6/glyphs.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">glyphs.py</span></code></a></p>
