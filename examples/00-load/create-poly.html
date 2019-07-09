@@ -43,7 +43,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Creating a Spline" href="create-spline.html" />
-    <link rel="prev" title="Parametric Geometric Objects" href="create-parametric-geometric-objects.html" />
+    <link rel="prev" title="Create Point Cloud" href="create-point-cloud.html" />
  
 
 <meta name="description" content="3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)">
@@ -127,6 +127,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#mesh-generation">Mesh Generation</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create-geometric-objects.html">Geometric Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-parametric-geometric-objects.html">Parametric Geometric Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="create-point-cloud.html">Create Point Cloud</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Create PolyData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-spline.html">Creating a Spline</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-structured-surface.html">Creating a Structured Surface</a></li>
@@ -247,7 +248,8 @@
 </div>
 <div class="sphx-glr-example-title section" id="create-polydata">
 <span id="ref-create-poly"></span><span id="sphx-glr-examples-00-load-create-poly-py"></span><h1>Create PolyData<a class="headerlink" href="#create-polydata" title="Permalink to this headline">¶</a></h1>
-<p>Creating a PolyData object from NumPy arrays</p>
+<p>Creating a PolyData (triangulated surface) object from NumPy arrays of the
+vertices and faces.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
@@ -274,7 +276,7 @@ the number of points for each face and the indices of each of those faces.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-poly_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-poly_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.572 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.560 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-poly-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ea0318be77aa9c4607d7dda6561f3c92/create-poly.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-poly.py</span></code></a></p>
@@ -297,7 +299,7 @@ the number of points for each face and the indices of each of those faces.</p>
         <a href="create-spline.html" class="btn btn-neutral float-right" title="Creating a Spline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="create-parametric-geometric-objects.html" class="btn btn-neutral float-left" title="Parametric Geometric Objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="create-point-cloud.html" class="btn btn-neutral float-left" title="Create Point Cloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

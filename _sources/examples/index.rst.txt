@@ -80,7 +80,27 @@ data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Creating a PolyData object from NumPy arrays">
+    <div class="sphx-glr-thumbcontainer" tooltip="Create a pyvista.PolyData object from a point cloud of vertices and scalar arrays for those poi...">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-point-cloud_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-point-cloud.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-point-cloud
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Creating a PolyData (triangulated surface) object from NumPy arrays of the vertices and faces.">
 
 .. only:: html
 

@@ -9,6 +9,7 @@
 ./_downloads/1970d64e8b3e33df7849a51bf5cfc68f/create-tri-surface.ipynb
 ./_downloads/19a39666a8b08843e78474c46dcdb4a1/slicing.ipynb
 ./_downloads/1a18f67193cc413ddf9a44648e7fdfaa/gif.py
+./_downloads/1a2feaff0566988cf16a6d00f182c420/create-point-cloud.ipynb
 ./_downloads/1c986183d1e12674b3bf457791e02d81/read-file.ipynb
 ./_downloads/24170fcc8bc23e8864b775c36a9f96b8/extract-edges.py
 ./_downloads/2c3b23d32db9652f0721618d8f93b8d0/themes.py
@@ -19,6 +20,7 @@
 ./_downloads/338c598aca5203693c796bb4c9b3a0b7/clear.py
 ./_downloads/3b25804b3ce36b7c6b9fb0ca7a68f4a0/read-image.ipynb
 ./_downloads/3ccdc3707698d02df1ce2b335b9a3ec3/linked.ipynb
+./_downloads/419240e6e66874d87b66c77bac495415/create-point-cloud.py
 ./_downloads/4194a1cc9df914b1363362c8fa41e442/movie.py
 ./_downloads/420473694df6a7186138d8fe1b9ecbae/texture.ipynb
 ./_downloads/43eaa30b3ab3ee872217db573e0b6b5e/shading.py
@@ -142,6 +144,10 @@
 ./_images/sphx_glr_create-parametric-geometric-objects_021.png
 ./_images/sphx_glr_create-parametric-geometric-objects_022.png
 ./_images/sphx_glr_create-parametric-geometric-objects_thumb.png
+./_images/sphx_glr_create-point-cloud_001.png
+./_images/sphx_glr_create-point-cloud_002.png
+./_images/sphx_glr_create-point-cloud_003.png
+./_images/sphx_glr_create-point-cloud_thumb.png
 ./_images/sphx_glr_create-poly_001.png
 ./_images/sphx_glr_create-poly_thumb.png
 ./_images/sphx_glr_create-spline_001.png
@@ -295,6 +301,7 @@
 ./_sources/core/points.rst.txt
 ./_sources/examples/00-load/create-geometric-objects.rst.txt
 ./_sources/examples/00-load/create-parametric-geometric-objects.rst.txt
+./_sources/examples/00-load/create-point-cloud.rst.txt
 ./_sources/examples/00-load/create-poly.rst.txt
 ./_sources/examples/00-load/create-spline.rst.txt
 ./_sources/examples/00-load/create-structured-surface.rst.txt
@@ -425,6 +432,7 @@
 ./core/points.html
 ./examples/00-load/create-geometric-objects.html
 ./examples/00-load/create-parametric-geometric-objects.html
+./examples/00-load/create-point-cloud.html
 ./examples/00-load/create-poly.html
 ./examples/00-load/create-spline.html
 ./examples/00-load/create-structured-surface.html
