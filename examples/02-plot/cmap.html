@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Custom Colormaps &mdash; PyVista 0.21.0 documentation</title>
+  <title>Colormap Choices &mdash; PyVista 0.21.0 documentation</title>
   
 
   
@@ -128,7 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#plotting">Plotting</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="clear.html">Clearing a Mesh or the Entire Plot</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Custom Colormaps</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Colormap Choices</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#matplotlib-vs-colorcet">Matplotlib vs. Colorcet</a></li>
 </ul>
 </li>
@@ -230,7 +230,7 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Custom Colormaps</li>
+      <li>Colormap Choices</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -255,20 +255,21 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-cmap-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="custom-colormaps">
-<span id="sphx-glr-examples-02-plot-cmap-py"></span><h1>Custom Colormaps<a class="headerlink" href="#custom-colormaps" title="Permalink to this headline">¶</a></h1>
-<p>Use a custom built colormap when plotting scalar values.</p>
+<div class="sphx-glr-example-title section" id="colormap-choices">
+<span id="sphx-glr-examples-02-plot-cmap-py"></span><h1>Colormap Choices<a class="headerlink" href="#colormap-choices" title="Permalink to this headline">¶</a></h1>
+<p>Use a Matplotlib, Colorcet, cmocean, or custom colormap when plotting scalar
+values.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
-<p>Any colormap built for <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> or <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> is fully compatible
-with PyVista. Colormaps are typically specified by passing the string name of
-the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> or <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> colormap to the plotting routine via the
-<code class="docutils literal notranslate"><span class="pre">cmap</span></code> argument.</p>
-<p>See <a class="reference external" href="https://matplotlib.org/tutorials/colors/colormaps.html">Matplotlib’s complete list of available colormaps</a> and
-<a class="reference external" href="http://colorcet.pyviz.org/user_guide/index.html">Colorcet’s complete list</a>.</p>
+<p>Any colormap built for <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">colorcet</span></code>, or <code class="docutils literal notranslate"><span class="pre">cmocean</span></code> is fully
+compatible with PyVista. Colormaps are typically specified by passing the
+string name of the colormap to the plotting routine via the <code class="docutils literal notranslate"><span class="pre">cmap</span></code>
+argument.</p>
+<p>See <a class="reference external" href="https://matplotlib.org/tutorials/colors/colormaps.html">Matplotlib’s complete list of available colormaps</a>,
+<a class="reference external" href="http://colorcet.pyviz.org/user_guide/index.html">Colorcet’s complete list</a>, and <a class="reference external" href="https://matplotlib.org/cmocean/">cmocean’s complete list</a>.</p>
 <p>To get started using a custom colormap, download some data with scalars to
 plot.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
@@ -290,6 +291,9 @@ colors, but you could make this as complex or simple as you desire.</p>
 “hot” colormap much like the example on the <a class="reference external" href="http://colorcet.pyviz.org/index.html">first page of Colorcet’s docs</a>.</p>
 <p>The “hot” version washes out detail at the high end, as if the image is
 overexposed, while “fire” makes detail visible throughout the data range.</p>
+<p>Please note that in order to use Colorcet’s colormaps including “fire”, you
+must have Colorcet installed in your Python environment:
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">colorcet</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;fire&quot;</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stitle</span><span class="o">=</span><span class="s2">&quot;Colorcet Fire&quot;</span><span class="p">)</span>
@@ -307,7 +311,7 @@ overexposed, while “fire” makes detail visible throughout the data range.</p
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_cmap_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_cmap_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.007 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.829 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-cmap-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/823c28d9bb2629e6de16c93282add6e9/cmap.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">cmap.py</span></code></a></p>

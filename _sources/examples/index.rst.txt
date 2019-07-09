@@ -630,7 +630,7 @@ plotting routines to perform tasks like:
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Use a custom built colormap when plotting scalar values.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Use a Matplotlib, Colorcet, cmocean, or custom colormap when plotting scalar values.">
 
 .. only:: html
 
