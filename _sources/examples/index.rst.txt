@@ -790,7 +790,7 @@ plotting routines to perform tasks like:
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Plot a mesh&#x27;s scalar array with an opacity trasfer funciton">
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot a mesh&#x27;s scalar array with an opacity trasfer funciton or opacity mapping based on a scala...">
 
 .. only:: html
 

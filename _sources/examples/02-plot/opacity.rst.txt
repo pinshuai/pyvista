@@ -10,26 +10,63 @@
 Plot with Opacity
 ~~~~~~~~~~~~~~~~~
 
-Plot a mesh's scalar array with an opacity trasfer funciton
+Plot a mesh's scalar array with an opacity trasfer funciton or opacity mapping
+based on a scalar array.
+
+
+.. code-block:: default
+
+    # sphinx_gallery_thumbnail_number = 2
+    import pyvista as pv
+    from pyvista import examples
+
+    # Load St Helens DEM and warp the topography
+    image = examples.download_st_helens()
+    mesh = image.warp_by_scalar()
+
+
+
+
+
+
+
+
+Global Value
+++++++++++++
+
+You can also apply a global opacity value to the mesh by passing a single
+float between 0 and 1 which would enable you to see objects behind the mesh:
 
 
 .. code-block:: default
 
 
-    import pyvista as pv
-    from pyvista import examples
+    p = pv.Plotter()
+    p.add_mesh(image.contour(), line_width=5,)
+    p.add_mesh(mesh, opacity=0.85, color=True)
+    p.show()
 
 
 
 
+.. image:: /examples/02-plot/images/sphx_glr_opacity_001.png
+    :class: sphx-glr-single-img
 
 
 
-It's possible to apply an opacity mapping to any scalar array plotted. You can
-specify either a single static value to make the mesh opaque on all cells, or
-use a transfer function where the scalar array plotted is mapped to the opacity.
 
-Opacity transfer function options are:
+Note that you can specify ``use_transparency=True`` to convert opacities to
+transperencies in any of the following examples.
+
+Transfer Functions
+++++++++++++++++++
+
+It's possible to apply an opacity mapping to any scalar array plotted. You
+can specify either a single static value to make the mesh transparent on all
+cells, or use a transfer function where the scalar array plotted is mapped
+to the opacity. We have several predefined transfer functions.
+
+Opacity transfer functions are:
 
 - ``'linear'``: linearly vary (increase) opacity across the plotted scalar range from low to high
 - ``'linear_r'``: linearly vary (increase) opacity across the plotted scalar range from high to low
@@ -42,16 +79,101 @@ Opacity transfer function options are:
 .. code-block:: default
 
 
-    # Load St Helens DEM and warp the topography
-    mesh = examples.download_st_helens().warp_by_scalar()
-
+    # Show the linear opacity transfer function
     mesh.plot(opacity="linear")
 
 
 
 
+.. image:: /examples/02-plot/images/sphx_glr_opacity_002.png
+    :class: sphx-glr-single-img
 
-.. image:: /examples/02-plot/images/sphx_glr_opacity_001.png
+
+
+
+
+.. code-block:: default
+
+
+    # Show the sigmoid opacity transfer function
+    mesh.plot(opacity="sigmoid")
+
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_opacity_003.png
+    :class: sphx-glr-single-img
+
+
+
+
+It's also possible to use your own transfer function that will be linearly
+mapped to the scalar array plotted. For example, we can create an opacity
+mapping as:
+
+
+.. code-block:: default
+
+    opacity = [0, 0.2, 0.9, 0.6, 0.3]
+
+
+
+
+
+
+
+When given a minimalized opacity mapping like that above, PyVista interplates
+it across a range of how many colors are shown when mapping the scalars.
+If ``scipy`` is avaialble, then a quadratic interpolation is used -
+otherwise, a simple linear interpolation is used.
+Curious what that opacity transfer function looks like? You can fetch it:
+
+
+.. code-block:: default
+
+
+    # Have PyVista interpolate the transfer function
+    tf = pv.opacity_transfer_function(opacity, 256).astype(float) / 255.
+
+    import matplotlib.pyplot as plt
+    plt.plot(tf)
+    plt.title('My Interpolated Opacity Transfer Function')
+    plt.ylabel('Opacity')
+    plt.xlabel('Index along scalar mapping')
+    plt.show()
+
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_opacity_004.png
+    :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    /home/travis/build/pyvista/pyvista/examples/02-plot/opacity.py:81: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+      plt.show()
+
+
+
+That opacity mapping will have an opacity of 0.0 at the minimum scalar range,
+a value or 0.9 at the middle of the scalar range, and a value of 0.3 at the
+maximum of the scalar range:
+
+
+.. code-block:: default
+
+
+    mesh.plot(opacity=opacity)
+
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_opacity_005.png
     :class: sphx-glr-single-img
 
 
@@ -97,7 +219,71 @@ And here we inspect the DICOM image with a few different opacity mappings:
 
 
 
-.. image:: /examples/02-plot/images/sphx_glr_opacity_002.png
+
+.. image:: /examples/02-plot/images/sphx_glr_opacity_006.png
+    :class: sphx-glr-single-img
+
+
+
+
+Opacity by Array
+++++++++++++++++
+
+You can also use a scalar array associated with the mesh to give each cell
+its own opacity/transperency value derived from a scalar field. For exmple,
+an uncertainty array from a modelling result could be used to hide regions of
+a mesh that are uncertain and highlight regions that are well resolved.
+
+The following is a demonstartion of plotting a mesh with colored values and
+using a second array to control the transperancy of the mesh
+
+
+.. code-block:: default
+
+
+    model = examples.download_model_with_variance()
+    contours = model.contour(10, scalars='Temperature')
+    print(contours.scalar_names)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    ['Temperature', 'Temperature_var']
+
+
+
+Make sure to flag ``use_transparency=True`` since we want areas of high
+variance to have high transperency.
+
+
+.. code-block:: default
+
+
+    p = pv.Plotter(shape=(1,2))
+
+    p.subplot(0,0)
+    p.add_text('Opacity by Array')
+    p.add_mesh(contours.copy(), scalars='Temperature',
+               opacity='Temperature_var',
+               use_transparency=True,
+               cmap='bwr')
+
+    p.subplot(0,1)
+    p.add_text('No Opacity')
+    p.add_mesh(contours, scalars='Temperature',
+               cmap='bwr')
+    p.show()
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_opacity_007.png
     :class: sphx-glr-single-img
 
 
@@ -106,7 +292,7 @@ And here we inspect the DICOM image with a few different opacity mappings:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.803 seconds)
+   **Total running time of the script:** ( 0 minutes  26.449 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_opacity.py:

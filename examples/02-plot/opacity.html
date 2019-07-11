@@ -136,7 +136,12 @@
 <li class="toctree-l3"><a class="reference internal" href="linked.html">Linked Views in Subplots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="movie.html">Create a MP4 Movie</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multi-window.html">Multi-Window Plot</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Plot with Opacity</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Plot with Opacity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-value">Global Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transfer-functions">Transfer Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opacity-by-array">Opacity by Array</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="orbit.html">Orbiting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-over-line.html">Plot Over Line</a></li>
 <li class="toctree-l3"><a class="reference internal" href="scalar-bars.html">Customize Scalar Bars</a></li>
@@ -254,15 +259,38 @@
 </div>
 <div class="sphx-glr-example-title section" id="plot-with-opacity">
 <span id="sphx-glr-examples-02-plot-opacity-py"></span><h1>Plot with Opacity<a class="headerlink" href="#plot-with-opacity" title="Permalink to this headline">¶</a></h1>
-<p>Plot a mesh’s scalar array with an opacity trasfer funciton</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<p>Plot a mesh’s scalar array with an opacity trasfer funciton or opacity mapping
+based on a scalar array.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
+
+<span class="c1"># Load St Helens DEM and warp the topography</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>It’s possible to apply an opacity mapping to any scalar array plotted. You can
-specify either a single static value to make the mesh opaque on all cells, or
-use a transfer function where the scalar array plotted is mapped to the opacity.</p>
-<p>Opacity transfer function options are:</p>
+<div class="section" id="global-value">
+<h2>Global Value<a class="headerlink" href="#global-value" title="Permalink to this headline">¶</a></h2>
+<p>You can also apply a global opacity value to the mesh by passing a single
+float between 0 and 1 which would enable you to see objects behind the mesh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">contour</span><span class="p">(),</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_opacity_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_001.png" />
+<p>Note that you can specify <code class="docutils literal notranslate"><span class="pre">use_transparency=True</span></code> to convert opacities to
+transperencies in any of the following examples.</p>
+</div>
+<div class="section" id="transfer-functions">
+<h2>Transfer Functions<a class="headerlink" href="#transfer-functions" title="Permalink to this headline">¶</a></h2>
+<p>It’s possible to apply an opacity mapping to any scalar array plotted. You
+can specify either a single static value to make the mesh transparent on all
+cells, or use a transfer function where the scalar array plotted is mapped
+to the opacity. We have several predefined transfer functions.</p>
+<p>Opacity transfer functions are:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'linear'</span></code>: linearly vary (increase) opacity across the plotted scalar range from low to high</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'linear_r'</span></code>: linearly vary (increase) opacity across the plotted scalar range from high to low</p></li>
@@ -271,13 +299,51 @@ use a transfer function where the scalar array plotted is mapped to the opacity.
 <li><p><code class="docutils literal notranslate"><span class="pre">'sigmoid'</span></code>: vary (increase) opacity on a sigmoidal s-curve across the plotted scalar range from low to high</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'sigmoid_r'</span></code>: vary (increase) opacity on a sigmoidal s-curve across the plotted scalar range from high to low</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load St Helens DEM and warp the topography</span>
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
-
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the linear opacity transfer function</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_opacity_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_001.png" />
+<img alt="../../_images/sphx_glr_opacity_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_002.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the sigmoid opacity transfer function</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_opacity_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_003.png" />
+<p>It’s also possible to use your own transfer function that will be linearly
+mapped to the scalar array plotted. For example, we can create an opacity
+mapping as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">opacity</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>When given a minimalized opacity mapping like that above, PyVista interplates
+it across a range of how many colors are shown when mapping the scalars.
+If <code class="docutils literal notranslate"><span class="pre">scipy</span></code> is avaialble, then a quadratic interpolation is used -
+otherwise, a simple linear interpolation is used.
+Curious what that opacity transfer function looks like? You can fetch it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Have PyVista interpolate the transfer function</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">opacity_transfer_function</span><span class="p">(</span><span class="n">opacity</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tf</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;My Interpolated Opacity Transfer Function&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Opacity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Index along scalar mapping&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_opacity_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_004.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/build/pyvista/pyvista/examples/02-plot/opacity.py:81: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()
+</pre></div>
+</div>
+<p>That opacity mapping will have an opacity of 0.0 at the minimum scalar range,
+a value or 0.9 at the middle of the scalar range, and a value of 0.3 at the
+maximum of the scalar range:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_opacity_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_005.png" />
 <p>Opacity mapping is often useful when plotting DICOM images. For example,
 download the sample knee DICOM image:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">knee</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_knee</span><span class="p">()</span>
@@ -304,8 +370,45 @@ download the sample knee DICOM image:</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_opacity_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.803 seconds)</p>
+<img alt="../../_images/sphx_glr_opacity_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_006.png" />
+</div>
+<div class="section" id="opacity-by-array">
+<h2>Opacity by Array<a class="headerlink" href="#opacity-by-array" title="Permalink to this headline">¶</a></h2>
+<p>You can also use a scalar array associated with the mesh to give each cell
+its own opacity/transperency value derived from a scalar field. For exmple,
+an uncertainty array from a modelling result could be used to hide regions of
+a mesh that are uncertain and highlight regions that are well resolved.</p>
+<p>The following is a demonstartion of plotting a mesh with colored values and
+using a second array to control the transperancy of the mesh</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_model_with_variance</span><span class="p">()</span>
+<span class="n">contours</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contours</span><span class="o">.</span><span class="n">scalar_names</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;Temperature&#39;, &#39;Temperature_var&#39;]
+</pre></div>
+</div>
+<p>Make sure to flag <code class="docutils literal notranslate"><span class="pre">use_transparency=True</span></code> since we want areas of high
+variance to have high transperency.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Opacity by Array&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">contours</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">,</span>
+           <span class="n">opacity</span><span class="o">=</span><span class="s1">&#39;Temperature_var&#39;</span><span class="p">,</span>
+           <span class="n">use_transparency</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;No Opacity&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">,</span>
+           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_opacity_007.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_opacity_007.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  26.449 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-opacity-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ec6d4d747c5483cae2ce234d5cc1d234/opacity.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">opacity.py</span></code></a></p>
@@ -315,6 +418,7 @@ download the sample knee DICOM image:</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
 </div>
 
 

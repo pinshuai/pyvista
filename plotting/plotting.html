@@ -864,7 +864,7 @@ will be replaced by the new actor.</p></li>
 
 <dl class="method">
 <dt id="pyvista.BasePlotter.add_mesh">
-<code class="sig-name descname">add_mesh</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">color=None</em>, <em class="sig-param">style=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">rng=None</em>, <em class="sig-param">stitle=None</em>, <em class="sig-param">show_edges=None</em>, <em class="sig-param">point_size=5.0</em>, <em class="sig-param">opacity=1.0</em>, <em class="sig-param">line_width=None</em>, <em class="sig-param">flip_scalars=False</em>, <em class="sig-param">lighting=None</em>, <em class="sig-param">n_colors=256</em>, <em class="sig-param">interpolate_before_map=False</em>, <em class="sig-param">cmap=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">reset_camera=None</em>, <em class="sig-param">scalar_bar_args=None</em>, <em class="sig-param">multi_colors=False</em>, <em class="sig-param">name=None</em>, <em class="sig-param">texture=None</em>, <em class="sig-param">render_points_as_spheres=None</em>, <em class="sig-param">smooth_shading=False</em>, <em class="sig-param">render_lines_as_tubes=False</em>, <em class="sig-param">edge_color=None</em>, <em class="sig-param">ambient=0.0</em>, <em class="sig-param">show_scalar_bar=None</em>, <em class="sig-param">nan_color=None</em>, <em class="sig-param">nan_opacity=1.0</em>, <em class="sig-param">loc=None</em>, <em class="sig-param">backface_culling=False</em>, <em class="sig-param">rgb=False</em>, <em class="sig-param">categories=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_mesh</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">color=None</em>, <em class="sig-param">style=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">rng=None</em>, <em class="sig-param">stitle=None</em>, <em class="sig-param">show_edges=None</em>, <em class="sig-param">point_size=5.0</em>, <em class="sig-param">opacity=1.0</em>, <em class="sig-param">line_width=None</em>, <em class="sig-param">flip_scalars=False</em>, <em class="sig-param">lighting=None</em>, <em class="sig-param">n_colors=256</em>, <em class="sig-param">interpolate_before_map=False</em>, <em class="sig-param">cmap=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">reset_camera=None</em>, <em class="sig-param">scalar_bar_args=None</em>, <em class="sig-param">multi_colors=False</em>, <em class="sig-param">name=None</em>, <em class="sig-param">texture=None</em>, <em class="sig-param">render_points_as_spheres=None</em>, <em class="sig-param">smooth_shading=False</em>, <em class="sig-param">render_lines_as_tubes=False</em>, <em class="sig-param">edge_color=None</em>, <em class="sig-param">ambient=0.0</em>, <em class="sig-param">show_scalar_bar=None</em>, <em class="sig-param">nan_color=None</em>, <em class="sig-param">nan_opacity=1.0</em>, <em class="sig-param">loc=None</em>, <em class="sig-param">backface_culling=False</em>, <em class="sig-param">rgb=False</em>, <em class="sig-param">categories=False</em>, <em class="sig-param">use_transparency=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a unstructured, structured, or surface mesh to the
 plotting object.</p>
 <p>Also accepts a 3D numpy.ndarray</p>
@@ -904,9 +904,13 @@ it.  To create a bar with no title, use an empty string
 <li><p><strong>show_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) – Shows the edges of a mesh.  Does not apply to a wireframe
 representation.</p></li>
 <li><p><strong>point_size</strong> (<em>float</em><em>, </em><em>optional</em>) – Point size.  Applicable when style=’points’.  Default 5.0</p></li>
-<li><p><strong>opacity</strong> (<em>float</em><em>, </em><em>optional</em>) – Opacity of mesh.  Should be between 0 and 1.  Default 1.0.
+<li><p><strong>opacity</strong> (<em>float</em><em>, </em><em>str</em><em>, </em><em>array-like</em>) – Opacity of mesh.  Should be between 0 and 1.  Default 1.0.
 A string option can also be specified to map the scalar range
-to the opacity. Options are: linear, linear_r, geom, geom_r</p></li>
+to a predefined opacity transfer function (options are: linear,
+linear_r, geom, geom_r). A string could also be used to map a
+scalar array to the the opacity (must have same number of elements
+as the <code class="docutils literal notranslate"><span class="pre">scalars</span></code> argument). Or you can pass custum made trasfer
+functions that are either <code class="docutils literal notranslate"><span class="pre">n_colors</span></code> in length or shorter.</p></li>
 <li><p><strong>line_width</strong> (<em>float</em><em>, </em><em>optional</em>) – Thickness of lines.  Only valid for wireframe and surface
 representations.  Default None.</p></li>
 <li><p><strong>flip_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) – Flip direction of cmap.</p></li>
@@ -944,6 +948,8 @@ meshes to be partially displayed.  Default False.</p></li>
 values as RGB+A colors! <code class="docutils literal notranslate"><span class="pre">rgba</span></code> is also accepted alias for this.</p></li>
 <li><p><strong>categories</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the number of unique values in the scalar
 array will be used as the <code class="docutils literal notranslate"><span class="pre">n_colors</span></code> argument.</p></li>
+<li><p><strong>use_transparency</strong> (<em>bool</em><em>, </em><em>optional</em>) – Invert the opacity mapping and make the values correspond to
+transperency.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

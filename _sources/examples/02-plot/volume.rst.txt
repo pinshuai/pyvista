@@ -17,7 +17,7 @@ NumPy arrays
 .. code-block:: default
 
 
-    # sphinx_gallery_thumbnail_number = 2
+    # sphinx_gallery_thumbnail_number = 3
     import pyvista as pv
     from pyvista import examples
 
@@ -38,7 +38,7 @@ NumPy arrays
 
  .. code-block:: none
 
-    UniformGrid (0x7fa40de4ffa8)
+    UniformGrid (0x7fc5c3e0a7c8)
       N Cells:      10225800
       N Points:     10368384
       X Bounds:     0.000e+00, 1.497e+02
@@ -92,8 +92,29 @@ Note that here we use a non-default opacity mapping to a sigmoid:
 
 
 
-
 .. image:: /examples/02-plot/images/sphx_glr_volume_002.png
+    :class: sphx-glr-single-img
+
+
+
+
+You can also use a custom opactiy mapping
+
+
+.. code-block:: default
+
+    opacity = [0, 0, 0, 0.1, 0.3, 0.6, 1]
+
+    p = pv.Plotter()
+    p.add_volume(vol, cmap="viridis", opacity=opacity)
+    p.camera_position = cpos
+    p.show()
+
+
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_volume_003.png
     :class: sphx-glr-single-img
 
 
@@ -118,7 +139,7 @@ Here are a few more cool colume rendering examples
 
 
 
-.. image:: /examples/02-plot/images/sphx_glr_volume_003.png
+.. image:: /examples/02-plot/images/sphx_glr_volume_004.png
     :class: sphx-glr-single-img
 
 
@@ -138,7 +159,7 @@ Here are a few more cool colume rendering examples
 
 
 
-.. image:: /examples/02-plot/images/sphx_glr_volume_004.png
+.. image:: /examples/02-plot/images/sphx_glr_volume_005.png
     :class: sphx-glr-single-img
 
 
@@ -159,7 +180,7 @@ Here are a few more cool colume rendering examples
 
 
 
-.. image:: /examples/02-plot/images/sphx_glr_volume_005.png
+.. image:: /examples/02-plot/images/sphx_glr_volume_006.png
     :class: sphx-glr-single-img
 
 
@@ -168,7 +189,7 @@ Here are a few more cool colume rendering examples
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  23.486 seconds)
+   **Total running time of the script:** ( 0 minutes  26.447 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_volume.py:
