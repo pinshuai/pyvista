@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Create Point Cloud &mdash; PyVista 0.21.0 documentation</title>
+  <title>Create Point Cloud &mdash; PyVista 0.21.1 documentation</title>
   
 
   
@@ -89,7 +89,7 @@
             
             
               <div class="version">
-                0.21.0
+                0.21.1
               </div>
             
           
@@ -276,11 +276,11 @@ than creating a PyVista mesh with your own NumPy arrays of vertice locations.</p
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[4.80949275e+05 4.40010610e+06 1.77403003e+03]
- [4.81054875e+05 4.40015450e+06 1.76132996e+03]
- [4.81016675e+05 4.40013890e+06 1.76159998e+03]
- [4.81101775e+05 4.40021400e+06 1.76931995e+03]
- [4.81080175e+05 4.40021230e+06 1.76006995e+03]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[4.81053375e+05 4.40008320e+06 1.77578003e+03]
+ [4.81010775e+05 4.40015730e+06 1.76075000e+03]
+ [4.81026775e+05 4.40011830e+06 1.77463000e+03]
+ [4.81036275e+05 4.40015970e+06 1.76058997e+03]
+ [4.81004675e+05 4.40023790e+06 1.75775000e+03]]
 </pre></div>
 </div>
 <p>Now that you have a NumPy array of points/vertices either from our sample
@@ -290,12 +290,12 @@ data or your own project, creating a PyVista mesh of those points is simply:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7fc59e50b588)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7ff816a998e8)
   N Cells:      67841
   N Points:     67841
   X Bounds:     4.809e+05, 4.811e+05
   Y Bounds:     4.400e+06, 4.400e+06
-  Z Bounds:     1.754e+03, 1.785e+03
+  Z Bounds:     1.754e+03, 1.787e+03
   N Arrays:     0
 </pre></div>
 </div>
@@ -357,11 +357,11 @@ cloud and add those vectors to the mesh.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-0.37176294 -0.74049585  0.55987338]
- [-0.21123634  0.3806471  -0.90027051]
- [ 0.86290694  0.49490178 -0.1022929 ]
- [-0.53121115  0.82322672  0.200281  ]
- [-0.61208247  0.13819809 -0.77862465]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-0.95261815 -0.30307885 -0.02572675]
+ [-0.80012979  0.46842109 -0.3746652 ]
+ [ 0.55297464 -0.68957774 -0.46765542]
+ [ 0.68047214  0.40281336 -0.61212667]
+ [ 0.1570909  -0.7191769   0.67683605]]
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point_cloud</span><span class="p">[</span><span class="s1">&#39;vectors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vectors</span>
@@ -383,7 +383,7 @@ cloud and add those vectors to the mesh.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-point-cloud_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-point-cloud_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.414 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.968 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-point-cloud-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/419240e6e66874d87b66c77bac495415/create-point-cloud.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-point-cloud.py</span></code></a></p>
