@@ -111,7 +111,7 @@ together.
 
  .. code-block:: none
 
-    UnstructuredGrid (0x7fb72309fa08)
+    UnstructuredGrid (0x7f7723a0a9a8)
       N Cells:      39353
       N Points:     48823
       X Bounds:     5.300e+01, 1.210e+02
@@ -155,7 +155,7 @@ Plot the pieced together mesh
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.543 seconds)
+   **Total running time of the script:** ( 0 minutes  3.229 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-parallel.py:

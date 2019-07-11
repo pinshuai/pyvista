@@ -340,19 +340,22 @@ and functions like a normal PyVista <code class="docutils literal notranslate"><
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.add_actor" title="pyvista.BackgroundPlotter.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(actor[, reset_camera, name, loc, …])</p></td>
 <td><p>Adds an actor to render window.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.clear_camera_positions" title="pyvista.BackgroundPlotter.clear_camera_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_camera_positions</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.add_callback" title="pyvista.BackgroundPlotter.add_callback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_callback</span></code></a>(func[, interval, count])</p></td>
+<td><p>Add a function that can update the scene in the background</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.clear_camera_positions" title="pyvista.BackgroundPlotter.clear_camera_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_camera_positions</span></code></a>()</p></td>
 <td><p>clears all camera positions</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.closeEvent" title="pyvista.BackgroundPlotter.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(self, QCloseEvent)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.closeEvent" title="pyvista.BackgroundPlotter.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(self, QCloseEvent)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.save_camera_position" title="pyvista.BackgroundPlotter.save_camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_camera_position</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.save_camera_position" title="pyvista.BackgroundPlotter.save_camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_camera_position</span></code></a>()</p></td>
 <td><p>Saves camera position to saved camera menu for recall</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.scale_axes_dialog" title="pyvista.BackgroundPlotter.scale_axes_dialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_axes_dialog</span></code></a>([show])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.scale_axes_dialog" title="pyvista.BackgroundPlotter.scale_axes_dialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_axes_dialog</span></code></a>([show])</p></td>
 <td><p>Open scale axes dialog</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.update_app_icon" title="pyvista.BackgroundPlotter.update_app_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_app_icon</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.update_app_icon" title="pyvista.BackgroundPlotter.update_app_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_app_icon</span></code></a>()</p></td>
 <td><p>Update the app icon if the user is not trying to resize the window.</p></td>
 </tr>
 </tbody>
@@ -391,6 +394,22 @@ meshes to be partially displayed.  Default False.</p></li>
 <li><p><strong>actor_properties</strong> (<em>vtk.Properties</em>) – Actor properties.</p></li>
 </ul>
 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.BackgroundPlotter.add_callback">
+<code class="sig-name descname">add_callback</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">interval=1000</em>, <em class="sig-param">count=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.add_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a function that can update the scene in the background</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> (<em>callable</em>) – Function to be called with no arguments.</p></li>
+<li><p><strong>interval</strong> (<em>int</em>) – Time interval between calls to <cite>func</cite> in milliseconds.</p></li>
+<li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of times <cite>func</cite> will be called. If None,
+<cite>func</cite> will be called until the main window is closed.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
