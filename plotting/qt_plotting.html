@@ -350,7 +350,7 @@ and functions like a normal PyVista <code class="docutils literal notranslate"><
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.quit" title="pyvista.BackgroundPlotter.quit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quit</span></code></a>()</p></td>
-<td><p></p></td>
+<td><p>Quit application</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.save_camera_position" title="pyvista.BackgroundPlotter.save_camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_camera_position</span></code></a>()</p></td>
 <td><p>Saves camera position to saved camera menu for recall</p></td>
@@ -365,7 +365,7 @@ and functions like a normal PyVista <code class="docutils literal notranslate"><
 </table>
 <dl class="class">
 <dt id="pyvista.BackgroundPlotter">
-<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">BackgroundPlotter</code><span class="sig-paren">(</span><em class="sig-param">show=True</em>, <em class="sig-param">app=None</em>, <em class="sig-param">shape=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">window_size=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">BackgroundPlotter</code><span class="sig-paren">(</span><em class="sig-param">show=True</em>, <em class="sig-param">app=None</em>, <em class="sig-param">shape=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">window_size=None</em>, <em class="sig-param">off_screen=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.plotting.qt_plotting.QtInteractor</span></code></p>
 <dl class="attribute">
 <dt id="pyvista.BackgroundPlotter.ICON_TIME_STEP">
@@ -431,7 +431,8 @@ meshes to be partially displayed.  Default False.</p></li>
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.quit">
 <code class="sig-name descname">quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.quit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Quit application</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.save_camera_position">
