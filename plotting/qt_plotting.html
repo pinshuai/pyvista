@@ -346,16 +346,19 @@ and functions like a normal PyVista <code class="docutils literal notranslate"><
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.clear_camera_positions" title="pyvista.BackgroundPlotter.clear_camera_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_camera_positions</span></code></a>()</p></td>
 <td><p>clears all camera positions</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.closeEvent" title="pyvista.BackgroundPlotter.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(self, QCloseEvent)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.close" title="pyvista.BackgroundPlotter.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.save_camera_position" title="pyvista.BackgroundPlotter.save_camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_camera_position</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.quit" title="pyvista.BackgroundPlotter.quit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quit</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.save_camera_position" title="pyvista.BackgroundPlotter.save_camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_camera_position</span></code></a>()</p></td>
 <td><p>Saves camera position to saved camera menu for recall</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.scale_axes_dialog" title="pyvista.BackgroundPlotter.scale_axes_dialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_axes_dialog</span></code></a>([show])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.scale_axes_dialog" title="pyvista.BackgroundPlotter.scale_axes_dialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_axes_dialog</span></code></a>([show])</p></td>
 <td><p>Open scale axes dialog</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.update_app_icon" title="pyvista.BackgroundPlotter.update_app_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_app_icon</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.update_app_icon" title="pyvista.BackgroundPlotter.update_app_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_app_icon</span></code></a>()</p></td>
 <td><p>Update the app icon if the user is not trying to resize the window.</p></td>
 </tr>
 </tbody>
@@ -421,8 +424,13 @@ meshes to be partially displayed.  Default False.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyvista.BackgroundPlotter.closeEvent">
-<code class="sig-name descname">closeEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BackgroundPlotter.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pyvista.BackgroundPlotter.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyvista.BackgroundPlotter.quit">
+<code class="sig-name descname">quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.quit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

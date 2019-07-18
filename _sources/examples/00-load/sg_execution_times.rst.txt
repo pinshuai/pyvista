@@ -5,17 +5,17 @@
 
 Computation times
 =================
-**01:13.730** total execution time for **examples_00-load** files:
+**01:14.411** total execution time for **examples_00-load** files:
 
-- **00:26.188**: :ref:`sphx_glr_examples_00-load_create-parametric-geometric-objects.py` (``create-parametric-geometric-objects.py``)
-- **00:13.854**: :ref:`sphx_glr_examples_00-load_read-image.py` (``read-image.py``)
-- **00:09.041**: :ref:`sphx_glr_examples_00-load_create-point-cloud.py` (``create-point-cloud.py``)
-- **00:07.267**: :ref:`sphx_glr_examples_00-load_read-file.py` (``read-file.py``)
-- **00:05.119**: :ref:`sphx_glr_examples_00-load_create-structured-surface.py` (``create-structured-surface.py``)
-- **00:03.599**: :ref:`sphx_glr_examples_00-load_read-parallel.py` (``read-parallel.py``)
-- **00:03.322**: :ref:`sphx_glr_examples_00-load_create-uniform-grid.py` (``create-uniform-grid.py``)
-- **00:01.475**: :ref:`sphx_glr_examples_00-load_create-spline.py` (``create-spline.py``)
-- **00:01.323**: :ref:`sphx_glr_examples_00-load_create-geometric-objects.py` (``create-geometric-objects.py``)
-- **00:01.254**: :ref:`sphx_glr_examples_00-load_create-tri-surface.py` (``create-tri-surface.py``)
-- **00:00.726**: :ref:`sphx_glr_examples_00-load_create-unstructured-surface.py` (``create-unstructured-surface.py``)
-- **00:00.561**: :ref:`sphx_glr_examples_00-load_create-poly.py` (``create-poly.py``)
+- **00:26.122**: :ref:`sphx_glr_examples_00-load_create-parametric-geometric-objects.py` (``create-parametric-geometric-objects.py``)
+- **00:13.993**: :ref:`sphx_glr_examples_00-load_read-image.py` (``read-image.py``)
+- **00:09.731**: :ref:`sphx_glr_examples_00-load_create-point-cloud.py` (``create-point-cloud.py``)
+- **00:07.606**: :ref:`sphx_glr_examples_00-load_read-file.py` (``read-file.py``)
+- **00:05.131**: :ref:`sphx_glr_examples_00-load_create-structured-surface.py` (``create-structured-surface.py``)
+- **00:03.343**: :ref:`sphx_glr_examples_00-load_create-uniform-grid.py` (``create-uniform-grid.py``)
+- **00:03.109**: :ref:`sphx_glr_examples_00-load_read-parallel.py` (``read-parallel.py``)
+- **00:01.469**: :ref:`sphx_glr_examples_00-load_create-spline.py` (``create-spline.py``)
+- **00:01.343**: :ref:`sphx_glr_examples_00-load_create-geometric-objects.py` (``create-geometric-objects.py``)
+- **00:01.277**: :ref:`sphx_glr_examples_00-load_create-tri-surface.py` (``create-tri-surface.py``)
+- **00:00.720**: :ref:`sphx_glr_examples_00-load_create-unstructured-surface.py` (``create-unstructured-surface.py``)
+- **00:00.567**: :ref:`sphx_glr_examples_00-load_create-poly.py` (``create-poly.py``)
