@@ -1100,6 +1100,9 @@ sizing for both the title and label.</p>
 <li><p><strong>text</strong> (<em>str</em>) – The text to add the the rendering</p></li>
 <li><p><strong>position</strong> (<em>str</em><em>, </em><em>tuple</em><em>(</em><em>float</em><em>)</em>) – String name of the position or length 2 tuple of the pixelwise
 position to place the bottom left corner of the text box.
+If string name is used, returns a <cite>vtkCornerAnnotation</cite> object
+normally used for fixed labels (like title or xlabel).
+If tuple is used, returns a more general <cite>vtkOpenGLTextActor</cite>.
 Default is to find the top left corner of the renderering window
 and place text box up there. Available position: <code class="docutils literal notranslate"><span class="pre">'lower_left'</span></code>,
 <code class="docutils literal notranslate"><span class="pre">'lower_right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper_left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper_right'</span></code>,
