@@ -601,7 +601,7 @@ is <code class="docutils literal notranslate"><span class="pre">True</span></cod
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.interpolate">
-<code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">sharpness=2</em>, <em class="sig-param">radius=1.0</em>, <em class="sig-param">dimensions=(101</em>, <em class="sig-param">101</em>, <em class="sig-param">101)</em>, <em class="sig-param">pass_cell_arrays=True</em>, <em class="sig-param">pass_point_arrays=True</em>, <em class="sig-param">kernel='gaussian'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.interpolate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">sharpness=2</em>, <em class="sig-param">radius=1.0</em>, <em class="sig-param">dimensions=(101</em>, <em class="sig-param">101</em>, <em class="sig-param">101)</em>, <em class="sig-param">pass_cell_arrays=True</em>, <em class="sig-param">pass_point_arrays=True</em>, <em class="sig-param">null_value=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.interpolate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate values onto this mesh from the point data of a given
 <a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object (typically a point cloud).</p>
 <p>This uses a guassian interpolation kernel. Use the <code class="docutils literal notranslate"><span class="pre">sharpness</span></code> and
@@ -622,6 +622,9 @@ distant points are reduced.</p></li>
 <code class="docutils literal notranslate"><span class="pre">dimensions</span></code> is number of points along each axis for that grid.</p></li>
 <li><p><strong>pass_cell_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) – Preserve source mesh’s original cell data arrays</p></li>
 <li><p><strong>pass_point_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) – Preserve source mesh’s original point data arrays</p></li>
+<li><p><strong>null_value</strong> (<em>float</em><em>, </em><em>optional</em>) – Specify the null point value. When a null point is encountered
+then all components of each null tuple are set to this value. By
+default the null value is set to zero.</p></li>
 </ul>
 </dd>
 </dl>
