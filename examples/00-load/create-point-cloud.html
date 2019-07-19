@@ -276,11 +276,11 @@ than creating a PyVista mesh with your own NumPy arrays of vertice locations.</p
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[4.81026975e+05 4.40023850e+06 1.75743005e+03]
- [4.80987575e+05 4.40014120e+06 1.76110999e+03]
- [4.80987575e+05 4.40009790e+06 1.76831995e+03]
- [4.81124675e+05 4.40021930e+06 1.76944995e+03]
- [4.81038575e+05 4.40017630e+06 1.75985999e+03]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[4.81122675e+05 4.40017390e+06 1.76937000e+03]
+ [4.80974175e+05 4.40008530e+06 1.77423999e+03]
+ [4.81062275e+05 4.40022810e+06 1.75739001e+03]
+ [4.81016975e+05 4.40020480e+06 1.75868994e+03]
+ [4.81070275e+05 4.40009100e+06 1.76152002e+03]]
 </pre></div>
 </div>
 <p>Now that you have a NumPy array of points/vertices either from our sample
@@ -290,12 +290,12 @@ data or your own project, creating a PyVista mesh of those points is simply:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7f2b2858bc48)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7f8194763c48)
   N Cells:      67841
   N Points:     67841
   X Bounds:     4.809e+05, 4.811e+05
   Y Bounds:     4.400e+06, 4.400e+06
-  Z Bounds:     1.754e+03, 1.785e+03
+  Z Bounds:     1.754e+03, 1.787e+03
   N Arrays:     0
 </pre></div>
 </div>
@@ -357,11 +357,11 @@ cloud and add those vectors to the mesh.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[ 0.3500825   0.56571062  0.74660146]
- [ 0.91125855  0.29174051  0.2906808 ]
- [ 0.11751335  0.83258274 -0.5412916 ]
- [ 0.38371234  0.58771426 -0.71228982]
- [ 0.73569237  0.33629686  0.58792955]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-0.00423569  0.56319814  0.82631103]
+ [-0.20611879 -0.95855305 -0.19670051]
+ [-0.52214734 -0.20500449  0.82784981]
+ [-0.47150225 -0.74477686 -0.47222141]
+ [ 0.48712382  0.3515897  -0.79943422]]
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point_cloud</span><span class="p">[</span><span class="s1">&#39;vectors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vectors</span>
@@ -383,7 +383,7 @@ cloud and add those vectors to the mesh.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-point-cloud_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-point-cloud_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.614 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.970 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-point-cloud-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/419240e6e66874d87b66c77bac495415/create-point-cloud.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-point-cloud.py</span></code></a></p>
