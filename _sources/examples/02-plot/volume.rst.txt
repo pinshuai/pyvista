@@ -38,7 +38,7 @@ NumPy arrays
 
  .. code-block:: none
 
-    UniformGrid (0x7f1f4369bb28)
+    UniformGrid (0x7f1321450948)
       N Cells:      10225800
       N Points:     10368384
       X Bounds:     0.000e+00, 1.497e+02
@@ -189,7 +189,7 @@ Here are a few more cool colume rendering examples
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  26.033 seconds)
+   **Total running time of the script:** ( 0 minutes  27.005 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_volume.py:
