@@ -39,9 +39,7 @@ using the :class:`pyvista.Plotter`:
 
     plotter = pv.Plotter(off_screen=True)
     plotter.add_mesh(mesh, color="orange")
-    plotter.show(auto_close=False)
-    # plotter.screenshot('airplane.png')
-    plotter.close()
+    plotter.show(screenshot='airplane.png')
 
 
 
@@ -73,7 +71,7 @@ The ``img`` array can be used to plot the screenshot in ``matplotlib``:
 
  .. code-block:: none
 
-    /home/travis/build/pyvista/pyvista/examples/02-plot/screenshot.py:30: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+    /home/travis/build/pyvista/pyvista/examples/02-plot/screenshot.py:28: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
       plt.show()
 
 
@@ -81,7 +79,7 @@ The ``img`` array can be used to plot the screenshot in ``matplotlib``:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.868 seconds)
+   **Total running time of the script:** ( 0 minutes  1.180 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_screenshot.py:

@@ -5,19 +5,19 @@
 
 Computation times
 =================
-**02:30.748** total execution time for **examples_01-filter** files:
+**02:29.824** total execution time for **examples_01-filter** files:
 
-- **00:31.231**: :ref:`sphx_glr_examples_01-filter_slicing.py` (``slicing.py``)
-- **00:21.405**: :ref:`sphx_glr_examples_01-filter_compute-volume.py` (``compute-volume.py``)
-- **00:16.871**: :ref:`sphx_glr_examples_01-filter_compute-normals.py` (``compute-normals.py``)
-- **00:14.386**: :ref:`sphx_glr_examples_01-filter_extract-edges.py` (``extract-edges.py``)
-- **00:13.000**: :ref:`sphx_glr_examples_01-filter_streamlines.py` (``streamlines.py``)
-- **00:11.524**: :ref:`sphx_glr_examples_01-filter_glyphs.py` (``glyphs.py``)
-- **00:09.711**: :ref:`sphx_glr_examples_01-filter_volume-smoothing.py` (``volume-smoothing.py``)
-- **00:08.459**: :ref:`sphx_glr_examples_01-filter_resample.py` (``resample.py``)
-- **00:06.685**: :ref:`sphx_glr_examples_01-filter_project-plane.py` (``project-plane.py``)
-- **00:05.766**: :ref:`sphx_glr_examples_01-filter_using-filters.py` (``using-filters.py``)
-- **00:05.203**: :ref:`sphx_glr_examples_01-filter_decimate.py` (``decimate.py``)
-- **00:04.077**: :ref:`sphx_glr_examples_01-filter_extract-cells-inside-surface.py` (``extract-cells-inside-surface.py``)
-- **00:01.316**: :ref:`sphx_glr_examples_01-filter_geodesic.py` (``geodesic.py``)
-- **00:01.116**: :ref:`sphx_glr_examples_01-filter_poly-ray-trace.py` (``poly-ray-trace.py``)
+- **00:31.404**: :ref:`sphx_glr_examples_01-filter_slicing.py` (``slicing.py``)
+- **00:21.326**: :ref:`sphx_glr_examples_01-filter_compute-volume.py` (``compute-volume.py``)
+- **00:17.191**: :ref:`sphx_glr_examples_01-filter_compute-normals.py` (``compute-normals.py``)
+- **00:14.484**: :ref:`sphx_glr_examples_01-filter_extract-edges.py` (``extract-edges.py``)
+- **00:12.479**: :ref:`sphx_glr_examples_01-filter_streamlines.py` (``streamlines.py``)
+- **00:11.083**: :ref:`sphx_glr_examples_01-filter_glyphs.py` (``glyphs.py``)
+- **00:09.780**: :ref:`sphx_glr_examples_01-filter_volume-smoothing.py` (``volume-smoothing.py``)
+- **00:08.537**: :ref:`sphx_glr_examples_01-filter_resample.py` (``resample.py``)
+- **00:06.494**: :ref:`sphx_glr_examples_01-filter_project-plane.py` (``project-plane.py``)
+- **00:05.679**: :ref:`sphx_glr_examples_01-filter_using-filters.py` (``using-filters.py``)
+- **00:05.005**: :ref:`sphx_glr_examples_01-filter_decimate.py` (``decimate.py``)
+- **00:03.946**: :ref:`sphx_glr_examples_01-filter_extract-cells-inside-surface.py` (``extract-cells-inside-surface.py``)
+- **00:01.311**: :ref:`sphx_glr_examples_01-filter_geodesic.py` (``geodesic.py``)
+- **00:01.104**: :ref:`sphx_glr_examples_01-filter_poly-ray-trace.py` (``poly-ray-trace.py``)
